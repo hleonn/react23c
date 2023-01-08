@@ -3,11 +3,11 @@ import { helpHttp } from "../helpers/helpHttp";
 
 export const useForm = (initialForm, validateForm) => {
   const [form, setForm] = useState(initialForm);
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState({});//si el objeto vacio no tiene ningun atributo, todo es correcto y podemos enviar el formulario
   const [loading, setLoading] = useState(false);
   const [response, setResponse] = useState(null);
 
-  const handleChange = (e) => {
+  const handleChange = (e) => {//detecte cuando estamos escribiendo y haga el cambio de los valores
     const { name, value } = e.target;
 
     setForm({
@@ -16,7 +16,7 @@ export const useForm = (initialForm, validateForm) => {
     });
   };
 
-  const handleBlur = (e) => {
+  const handleBlur = (e) => {//aqui vamos a hacer las validaciones, aqui se desencadenan
     handleChange(e);
     setErrors(validateForm(form));
   };
@@ -29,7 +29,7 @@ export const useForm = (initialForm, validateForm) => {
       alert("Enviando Formulario");
       setLoading(true);
       helpHttp()
-        .post("https://formsubmit.co/ajax/jonmircha@gmail.com", {
+        .post("https://formsubmit.co/ajax/tatoleon2020@gmail.com", {
           body: form,
           headers: {
             "Content-Type": "application/json",

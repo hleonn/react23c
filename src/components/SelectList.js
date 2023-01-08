@@ -3,10 +3,10 @@ import Loader from "./Loader";
 import Message from "./Message";
 
 const SelectList = ({ title, url, handleChange }) => {
-  const { data, error, loading } = useFetch(url);
+  const { data, error, loading } = useFetch(url);//va a tomar la url que SelectList le este pasando
   //console.log(data, error, loading);
 
-  if (!data) return null;
+  if (!data) return null;//si no hay datos, retorna null
 
   if (error) {
     return (
@@ -18,7 +18,7 @@ const SelectList = ({ title, url, handleChange }) => {
   }
 
   let id = `select-${title}`;
-  let label = title.charAt(0).toUpperCase() + title.slice(1);
+  let label = title.charAt(0).toUpperCase() + title.slice(1);//extrae la primer letra, convertir a mayusc,concatena lo que trae prop title, corta la prop, y escribela apartir del caracter 1
   let options = data.response[title];
   //console.log(options);
 

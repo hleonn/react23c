@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import SelectList from "./SelectList";
 
 //https://api-sepomex.hckdrk.me/
-
+//api.copomex.com
 const SelectsAnidados = () => {
   const [state, setState] = useState("");
   const [town, setTown] = useState("");
@@ -16,7 +16,7 @@ const SelectsAnidados = () => {
       <h3>México</h3>
       <SelectList
         title="estado"
-        url={`https://api-sepomex.hckdrk.mx/query/get_estados?token=${TOKEN}`}
+        url={`https://api.copomex.com/query/get_estados?token=${TOKEN}`}
         handleChange={(e) => {
           setState(e.target.value);
         }}
@@ -24,7 +24,7 @@ const SelectsAnidados = () => {
       {state && (
         <SelectList
           title="municipios"
-          url={`https://api-sepomex.hckdrk.mx/query/get_municipio_por_estado/${state}?token=${TOKEN}`}
+          url={`https://api.copomex.com/query/get_municipio_por_estado/${state}?token=${TOKEN}`}
           handleChange={(e) => {
             setTown(e.target.value);
           }}
@@ -33,7 +33,7 @@ const SelectsAnidados = () => {
       {town && (
         <SelectList
           title="colonia"
-          url={`https://api-sepomex.hckdrk.mx/query/get_colonia_por_municipio/${town}?token=${TOKEN}`}
+          url={`https://api.copomex.com/query/get_colonia_por_municipio/${town}?token=${TOKEN}`}
           handleChange={(e) => {
             setSuburb(e.target.value);
           }}

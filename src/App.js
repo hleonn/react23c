@@ -2,6 +2,8 @@ import React from 'react';
 import CrudApp from "./components/CrudApp";
 import CrudApi from "./components/CrudApi";
 import SelectsAnidados from "./components/SelectsAnidados";
+import ContactForm from "./components/ContactForm";
+
 function App() {
   return (
     <>
@@ -9,7 +11,7 @@ function App() {
       <hr />
       {/* <Modals /> */}
       <hr />
-      {/* <ContactForm /> */}
+      <ContactForm />
       <hr />
       <SelectsAnidados /> 
       <hr />

@@ -1,7 +1,7 @@
 import React from 'react';
 import CrudApp from "./components/CrudApp";
 import CrudApi from "./components/CrudApi";
-
+import SelectsAnidados from "./components/SelectsAnidados";
 function App() {
   return (
     <>
@@ -11,7 +11,7 @@ function App() {
       <hr />
       {/* <ContactForm /> */}
       <hr />
-      {/* <SelectsAnidados /> */}
+      <SelectsAnidados /> 
       <hr />
       {/* <SongSearch /> */}
       <CrudApi /> 

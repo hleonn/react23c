@@ -1,6 +1,6 @@
 .modal {
   position: fixed;
-  z-index: 999;
+  z-index: 999;/* nivel de profundidad lo más alto posible */
   top: 0;
   left: 0;
   width: 100%;
@@ -23,7 +23,7 @@
 }
 
 .modal-close {
-  position: absolute;
+  position: absolute;/* si encuentra un padre en la jerarquia del DOM, si es relativo se posiciona respecto de el, sino respecto del Html */
   top: 1rem;
   right: 1rem;
 }

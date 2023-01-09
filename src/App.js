@@ -4,6 +4,7 @@ import CrudApi from "./components/CrudApi";
 import SelectsAnidados from "./components/SelectsAnidados";
 import ContactForm from "./components/ContactForm";
 import Modals from "./components/Modals";
+import SongSearch from "./components/SongSearch";
 
 function App() {
   return (

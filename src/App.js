@@ -9,7 +9,7 @@ function App() {
     <>
       <h1>Ejercicios con React</h1>
       <hr />
-      {/* <Modals /> */}
+      <Modals /> 
       <hr />
       <ContactForm />
       <hr />

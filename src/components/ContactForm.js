@@ -11,9 +11,9 @@ const initialForm = {
 
 const validationsForm = (form) => {
   let errors = {};
-  let regexName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
-  let regexEmail = /^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$/;
-  let regexComments = /^.{1,255}$/;
+  let regexName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;//espacio en blanco /s
+  let regexEmail = /^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$/;//cualquier caracter alfanumerico \w
+  let regexComments = /^.{1,255}$/;//en total 255 caracteres
 
   if (!form.name.trim()) {//si name viene vacio,eliminamos espacios vacios o lineas, diagonales
     errors.name = "El campo 'Nombre' es requerido";

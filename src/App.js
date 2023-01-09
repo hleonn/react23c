@@ -3,6 +3,7 @@ import CrudApp from "./components/CrudApp";
 import CrudApi from "./components/CrudApi";
 import SelectsAnidados from "./components/SelectsAnidados";
 import ContactForm from "./components/ContactForm";
+import Modals from "./components/Modals";
 
 function App() {
   return (

@@ -15,7 +15,7 @@ const validationsForm = (form) => {
   let regexEmail = /^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$/;
   let regexComments = /^.{1,255}$/;
 
-  if (!form.name.trim()) {
+  if (!form.name.trim()) {//si name viene vacio,eliminamos espacios vacios o lineas, diagonales
     errors.name = "El campo 'Nombre' es requerido";
   } else if (!regexName.test(form.name.trim())) {
     errors.name = "El campo 'Nombre' sólo acepta letras y espacios en blanco";
